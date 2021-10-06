@@ -146,7 +146,6 @@ end
 
 M.nvimtree = function()
    map("n", plugin_maps.nvimtree.toggle, ":NvimTreeToggle <CR>")
-   map("n", plugin_maps.nvimtree.focus, ":NvimTreeFocus <CR>")
 end
 
 M.telescope = function()
@@ -162,6 +161,7 @@ M.telescope = function()
    map("n", m.oldfiles, ":Telescope oldfiles <CR>")
    map("n", m.themes, ":Telescope themes <CR>")
 end
+
 
 M.telescope_media = function()
    local m = plugin_maps.telescope.telescope_media

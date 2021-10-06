@@ -12,7 +12,7 @@ M.options = {
    ruler = false,
    hidden = true,
    ignorecase = true,
-   mapleader = " ",
+   -- mapleader = "\\",
    mouse = "a",
    number = true,
    -- relative numbers in normal mode tool at the bottom of options.lua
@@ -54,6 +54,8 @@ M.ui = {
    transparency = false,
 }
 
+-- TODO: git move hunk
+
 -- these are plugin related options
 M.plugins = {
    -- enable and disable plugins (false for disable)
@@ -74,7 +76,7 @@ M.plugins = {
    },
    options = {
       lspconfig = {
-         setup_lspconf = "", -- path of file containing setups of different lsps
+         setup_lspconf = "custom.lspconfig", -- path of file containing setups of different lsps
       },
       nvimtree = {
          enable_git = 0,
@@ -173,23 +175,22 @@ M.mappings.plugins = {
    },
    -- file explorer/tree
    nvimtree = {
-      toggle = "<C-n>",
-      focus = "<leader>e",
+      toggle = "<space>e"
    },
    -- multitool for finding & picking things
    telescope = {
-      buffers = "<leader>fb",
-      find_files = "<leader>ff",
-      find_hiddenfiles = "<leader>fa",
-      git_commits = "<leader>cm",
-      git_status = "<leader>gt",
-      help_tags = "<leader>fh",
-      live_grep = "<leader>fw",
-      oldfiles = "<leader>fo",
-      themes = "<leader>th", -- NvChad theme picker
+      buffers = "<space>b",
+      find_files = "<space>f",
+      find_hiddenfiles = "<space>sh",
+      git_commits = "<space>cm",
+      git_status = "<space>gt",
+      help_tags = "<space>sh",
+      live_grep = "<space>sw",
+      oldfiles = "<space>so",
+      themes = "<space>th", -- NvChad theme picker
       -- media previews within telescope finders
       telescope_media = {
-         media_files = "<leader>fp",
+         media_files = "<space>fp",
       },
    },
 }
