@@ -264,9 +264,9 @@ return packer.startup(function()
       end,
    }
 
-   use {
-     "fatih/vim-go"
-   }
+   ---use {
+   ---  "fatih/vim-go"
+   ---}
 
   use {
     "williamboman/nvim-lsp-installer",
