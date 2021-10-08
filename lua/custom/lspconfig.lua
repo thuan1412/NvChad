@@ -8,6 +8,11 @@ M.setup_lsp = function(attach, capabilities)
     capabilities = capabilities,
   }
 
+  lspconfig.tsserver.setup {
+    on_attach = attach,
+    capabilities = capabilities,
+  }
+
   require'lspconfig'.gopls.setup {
     cmd = { "gopls" },
     settings = {gopls = {analyses = {unusedparams = true}, staticcheck = true}},
