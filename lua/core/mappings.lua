@@ -122,10 +122,22 @@ end
 -- below are all plugin related mappings
 
 M.bufferline = function()
-   local m = plugin_maps.bufferline
+  local m = plugin_maps.bufferline
 
-   map("n", m.next_buffer, ":BufferLineCycleNext <CR>")
-   map("n", m.prev_buffer, ":BufferLineCyclePrev <CR>")
+  map("n", m.next_buffer, ":BufferLineCycleNext <CR>")
+  map("n", m.prev_buffer, ":BufferLineCyclePrev <CR>")
+
+  map("n", "<leader>c", ":bdelete<CR>")
+
+  map("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>")
+  map("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>")
+  map("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>")
+  map("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>")
+  map("n", "<leader>5", ":BufferLineGoToBuffer 5<CR>")
+  map("n", "<leader>6", ":BufferLineGoToBuffer 6<CR>")
+  map("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>")
+  map("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>")
+  map("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>")
 end
 
 M.comment = function()
@@ -161,7 +173,6 @@ M.telescope = function()
    map("n", m.oldfiles, ":Telescope oldfiles <CR>")
    map("n", m.themes, ":Telescope themes <CR>")
 end
-
 
 M.telescope_media = function()
    local m = plugin_maps.telescope.telescope_media

@@ -8,21 +8,24 @@ end
 bufferline.setup {
    options = {
       offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+      numbers = function(opts)
+        return string.format('%s-', opts.ordinal, opts.id)
+      end,
       buffer_close_icon = "",
-      modified_icon = "",
+      modified_icon = "●",
       -- close_icon = "%@NvChad_bufferline_quitvim@%X",
       close_icon = "",
       show_close_icon = true,
       left_trunc_marker = "",
       right_trunc_marker = "",
-      max_name_length = 14,
-      max_prefix_length = 13,
+      max_name_length = 20,
+      max_prefix_length = 20,
       tab_size = 20,
       show_tab_indicators = true,
       enforce_regular_tabs = false,
       view = "multiwindow",
       show_buffer_close_icons = true,
-      separator_style = "thin",
+      separator_style = "thick",
       always_show_bufferline = true,
       diagnostics = false, -- "or nvim_lsp"
       custom_filter = function(buf_number)

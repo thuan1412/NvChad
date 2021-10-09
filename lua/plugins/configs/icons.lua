@@ -92,11 +92,6 @@ icons.setup {
          color = colors.blue,
          name = "toml",
       },
-      ts = {
-         icon = "ﯤ",
-         color = colors.teal,
-         name = "ts",
-      },
       rb = {
          icon = "",
          color = colors.pink,
