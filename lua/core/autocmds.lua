@@ -11,6 +11,9 @@ vim.cmd [[ au TermOpen term://* setlocal nonumber norelativenumber | setfiletype
 -- Don't show status line on certain windows
 vim.cmd [[ autocmd BufEnter,BufWinEnter,FileType,WinEnter * lua require("core.utils").hide_statusline() ]]
 
+vim.cmd [[ autocmd Filetype go setlocal tabstop=4 ]]
+vim.cmd [[ au BufWrite * :Neoformat ]]
+vim.cmd [[ autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync() ]]
 -- Open a file from its last left off position
 -- vim.cmd [[ au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]
 -- File extension specific tabbing

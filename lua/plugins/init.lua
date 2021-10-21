@@ -221,14 +221,9 @@ return packer.startup(function()
    }
 
    use {
-      "terrortylor/nvim-comment",
-      disable = not status.comment,
-      cmd = "CommentToggle",
-      config = override_req("nvim_comment", "(plugins.configs.others).comment()"),
-      setup = function()
-         require("core.mappings").comment()
-      end,
-   }
+      "numToStr/Comment.nvim",
+      config = override_req("Comment", "plugins.configs.comment"),
+    }
 
    -- file managing , picker etc
    use {
@@ -264,6 +259,13 @@ return packer.startup(function()
       end,
    }
 
+    use {
+      "luukvbaal/stabilize.nvim",
+      config = function() require("stabilize").setup() end
+    }
+
+		-- code format
+		use { 'sbdchd/neoformat' }
    ---use {
    ---  "fatih/vim-go"
    ---}

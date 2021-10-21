@@ -140,11 +140,11 @@ M.bufferline = function()
   map("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>")
 end
 
-M.comment = function()
-   local m = plugin_maps.comment.toggle
-   map("n", m, ":CommentToggle <CR>")
-   map("v", m, ":CommentToggle <CR>")
-end
+-- M.comment = function()
+--    local m = plugin_maps.comment.toggle
+--    map("n", m, ":CommentToggle <CR>")
+--    map("v", m, ":CommentToggle <CR>")
+-- end
 
 M.dashboard = function()
    local m = plugin_maps.dashboard

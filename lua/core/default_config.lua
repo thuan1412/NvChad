@@ -157,10 +157,6 @@ M.mappings.plugins = {
       next_buffer = "<TAB>", -- next buffer
       prev_buffer = "<S-Tab>", -- previous buffer
    },
-   -- easily (un)comment code, language aware
-   comment = {
-      toggle = "?", -- toggle comment (works on multiple lines)
-   },
    -- NeoVim 'home screen' on open
    dashboard = {
       bookmarks = "<leader>bm",
