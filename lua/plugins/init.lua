@@ -219,14 +219,9 @@ return packer.startup(function()
    }
 
    use {
-      "terrortylor/nvim-comment",
-      disable = not status.comment,
-      cmd = "CommentToggle",
-      config = override_req("nvim_comment", "(plugins.configs.others).comment()"),
-      setup = function()
-         require("core.mappings").comment()
-      end,
-   }
+      "numToStr/Comment.nvim",
+      config = override_req("Comment", "plugins.configs.comment"),
+    }
 
    -- file managing , picker etc
    use {
@@ -261,6 +256,51 @@ return packer.startup(function()
          require("core.mappings").telescope()
       end,
    }
+
+    use {
+      "luukvbaal/stabilize.nvim",
+      config = function() require("stabilize").setup() end
+    }
+
+    use {
+      "github/copilot.vim"
+    }
+
+    -- tpope -- TODO: replace with lua
+    use 'tpope/vim-abolish'
+    use 'tpope/vim-repeat'
+    use 'tpope/vim-speeddating'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-unimpaired'
+    use 'tpope/vim-dadbod'
+
+		-- code format
+		use { 'sbdchd/neoformat' }
+   ---use {
+   ---  "fatih/vim-go"
+   ---}
+
+   -- TODO: install later
+  -- mhartington/dotfiles is the dotfiles of the vim for frontend author
+  -- use nvim-ts-comment-string
+  -- use nvim-comment
+  -- use mhartington/formatter-nvim
+  -- use nvim-telescope/telescope-node-modules
+  use 'TimUntersberger/neogit'
+  -- use octo - github integraion - nice
+  -- use package-info.nvim
+
+  use {
+    "williamboman/nvim-lsp-installer",
+    config = function()         
+      local lsp_installer = require "nvim-lsp-installer"
+      lsp_installer.on_server_ready(function(server)
+        local opts = {}
+          server:setup(opts)            
+          vim.cmd [[ do User LspAttachBuffers ]]
+        end)
+      end,
+    }
 
    require("core.hooks").run("install_plugins", use)
 end)

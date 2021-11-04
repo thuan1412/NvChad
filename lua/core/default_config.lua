@@ -13,16 +13,16 @@ M.options = {
    hidden = true,
    ignorecase = true,
    smartcase = true,
-   mapleader = " ",
+   -- mapleader = "\\",
    mouse = "a",
    number = true,
    -- relative numbers in normal mode tool at the bottom of options.lua
    numberwidth = 2,
-   relativenumber = false,
+   relativenumber = true,
    expandtab = true,
    shiftwidth = 2,
    smartindent = true,
-   tabstop = 8, -- Number of spaces that a <Tab> in the file counts for
+   tabstop = 2, -- Number of spaces that a <Tab> in the file counts for
    timeoutlen = 400,
    -- interval for writing swap file to disk, also used by gitsigns
    updatetime = 250,
@@ -55,6 +55,8 @@ M.ui = {
    transparency = false,
 }
 
+-- TODO: git move hunk
+
 -- these are plugin related options
 M.plugins = {
    -- enable and disable plugins (false for disable)
@@ -76,7 +78,7 @@ M.plugins = {
    },
    options = {
       lspconfig = {
-         setup_lspconf = "", -- path of file containing setups of different lsps
+         setup_lspconf = "custom.lspconfig", -- path of file containing setups of different lsps
       },
       nvimtree = {
          enable_git = 0,
@@ -157,10 +159,6 @@ M.mappings.plugins = {
       next_buffer = "<TAB>", -- next buffer
       prev_buffer = "<S-Tab>", -- previous buffer
    },
-   -- easily (un)comment code, language aware
-   comment = {
-      toggle = "<leader>/", -- toggle comment (works on multiple lines)
-   },
    -- NeoVim 'home screen' on open
    dashboard = {
       bookmarks = "<leader>bm",
@@ -175,23 +173,23 @@ M.mappings.plugins = {
    },
    -- file explorer/tree
    nvimtree = {
-      toggle = "<C-n>",
-      focus = "<leader>e",
+      toggle = "<space>e"
    },
    -- multitool for finding & picking things
    telescope = {
-      buffers = "<leader>fb",
-      find_files = "<leader>ff",
-      find_hiddenfiles = "<leader>fa",
-      git_commits = "<leader>cm",
-      git_status = "<leader>gt",
-      help_tags = "<leader>fh",
-      live_grep = "<leader>fw",
-      oldfiles = "<leader>fo",
-      themes = "<leader>th", -- NvChad theme picker
+      buffers = "<space>b",
+      code_actions = "<space>a",
+      find_files = "<space>f",
+      find_hiddenfiles = "<space>sh",
+      git_commits = "<space>cm",
+      git_status = "<space>gt",
+      help_tags = "<space>sh",
+      live_grep = "<space>sw",
+      oldfiles = "<space>so",
+      themes = "<space>th", -- NvChad theme picker
       -- media previews within telescope finders
       telescope_media = {
-         media_files = "<leader>fp",
+         media_files = "<space>fp",
       },
    },
 }

@@ -97,10 +97,10 @@ icons.setup {
          color = colors.blue,
          name = "toml",
       },
-      ts = {
-         icon = "ﯤ",
-         color = colors.teal,
-         name = "ts",
+      ttf = {
+         icon = "",
+         color = colors.white,
+         name = "TrueTypeFont"
       },
       ttf = {
          icon = "",

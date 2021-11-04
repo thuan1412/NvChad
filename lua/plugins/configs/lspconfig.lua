@@ -1,5 +1,10 @@
 local overrides = require("core.hooks").createOverrides "lsp"
 
+local opts = { noremap = true, }
+
+local nvim_set_keymap = vim.api.nvim_set_keymap
+nvim_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+nvim_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 local function on_attach(_, bufnr)
    local function buf_set_keymap(...)
       vim.api.nvim_buf_set_keymap(bufnr, ...)
@@ -12,7 +17,7 @@ local function on_attach(_, bufnr)
    buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 
    -- Mappings.
-   local opts = { noremap = true, silent = true }
+   local opts = { noremap = true, }
 
    -- See `:help vim.lsp.*` for documentation on any of the below functions
    buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)

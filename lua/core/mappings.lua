@@ -122,17 +122,29 @@ end
 -- below are all plugin related mappings
 
 M.bufferline = function()
-   local m = plugin_maps.bufferline
+  local m = plugin_maps.bufferline
 
-   map("n", m.next_buffer, ":BufferLineCycleNext <CR>")
-   map("n", m.prev_buffer, ":BufferLineCyclePrev <CR>")
+  map("n", m.next_buffer, ":BufferLineCycleNext <CR>")
+  map("n", m.prev_buffer, ":BufferLineCyclePrev <CR>")
+
+  map("n", "<leader>c", ":bdelete<CR>")
+
+  map("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>")
+  map("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>")
+  map("n", "<leader>3", ":BufferLineGoToBuffer 3<CR>")
+  map("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>")
+  map("n", "<leader>5", ":BufferLineGoToBuffer 5<CR>")
+  map("n", "<leader>6", ":BufferLineGoToBuffer 6<CR>")
+  map("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>")
+  map("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>")
+  map("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>")
 end
 
-M.comment = function()
-   local m = plugin_maps.comment.toggle
-   map("n", m, ":CommentToggle <CR>")
-   map("v", m, ":CommentToggle <CR>")
-end
+-- M.comment = function()
+--    local m = plugin_maps.comment.toggle
+--    map("n", m, ":CommentToggle <CR>")
+--    map("v", m, ":CommentToggle <CR>")
+-- end
 
 M.dashboard = function()
    local m = plugin_maps.dashboard
@@ -146,13 +158,13 @@ end
 
 M.nvimtree = function()
    map("n", plugin_maps.nvimtree.toggle, ":NvimTreeToggle <CR>")
-   map("n", plugin_maps.nvimtree.focus, ":NvimTreeFocus <CR>")
 end
 
 M.telescope = function()
    local m = plugin_maps.telescope
 
    map("n", m.buffers, ":Telescope buffers <CR>")
+   map("n", m.code_actions, ":Telescope lsp_code_actions <CR>")
    map("n", m.find_files, ":Telescope find_files <CR>")
    map("n", m.find_hiddenfiles, ":Telescope find_files hidden=true <CR>")
    map("n", m.git_commits, ":Telescope git_commits <CR>")
