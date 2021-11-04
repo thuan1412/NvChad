@@ -164,6 +164,7 @@ M.telescope = function()
    local m = plugin_maps.telescope
 
    map("n", m.buffers, ":Telescope buffers <CR>")
+   map("n", m.code_actions, ":Telescope lsp_code_actions <CR>")
    map("n", m.find_files, ":Telescope find_files <CR>")
    map("n", m.find_hiddenfiles, ":Telescope find_files hidden=true <CR>")
    map("n", m.git_commits, ":Telescope git_commits <CR>")

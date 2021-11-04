@@ -176,6 +176,7 @@ M.mappings.plugins = {
    -- multitool for finding & picking things
    telescope = {
       buffers = "<space>b",
+      code_actions = "<space>a",
       find_files = "<space>f",
       find_hiddenfiles = "<space>sh",
       git_commits = "<space>cm",

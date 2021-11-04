@@ -22,6 +22,11 @@ M.setup_lsp = function(attach, capabilities)
     capabilities = capabilities,
   }
 
+  require'lspconfig'.pyright.setup{
+    on_attach = attach,
+    capabilities = capabilities,
+  }
+
   end
 
   return M

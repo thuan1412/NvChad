@@ -264,11 +264,33 @@ return packer.startup(function()
       config = function() require("stabilize").setup() end
     }
 
+    use {
+      "github/copilot.vim"
+    }
+
+    -- tpope -- TODO: replace with lua
+    use 'tpope/vim-abolish'
+    use 'tpope/vim-repeat'
+    use 'tpope/vim-speeddating'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-unimpaired'
+    use 'tpope/vim-dadbod'
+
 		-- code format
 		use { 'sbdchd/neoformat' }
    ---use {
    ---  "fatih/vim-go"
    ---}
+
+   -- TODO: install later
+  -- mhartington/dotfiles is the dotfiles of the vim for frontend author
+  -- use nvim-ts-comment-string
+  -- use nvim-comment
+  -- use mhartington/formatter-nvim
+  -- use nvim-telescope/telescope-node-modules
+  use 'TimUntersberger/neogit'
+  -- use octo - github integraion - nice
+  -- use package-info.nvim
 
   use {
     "williamboman/nvim-lsp-installer",
