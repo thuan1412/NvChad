@@ -274,8 +274,15 @@ return packer.startup(function()
     use 'tpope/vim-unimpaired'
     use 'tpope/vim-dadbod'
 
-		-- code format
-		use { 'sbdchd/neoformat' }
+    -- file outline
+   use {
+      'liuchengxu/vista.vim',
+      setup = function()
+         require("core.mappings").vista()
+      end
+   }
+	-- code format
+	use { 'sbdchd/neoformat' }
    ---use {
    ---  "fatih/vim-go"
    ---}

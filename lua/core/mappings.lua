@@ -27,6 +27,8 @@ M.misc = function()
       map("", "<Down>", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', { expr = true })
       map("", "<Up>", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', { expr = true })
 
+      -- vista toggle
+      map("n", "7", ":Vista!! <CR>")
       -- use ESC to turn off search highlighting
       map("n", "<Esc>", ":noh <CR>")
    end

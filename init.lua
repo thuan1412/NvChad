@@ -17,3 +17,4 @@ vim.g.copilot_tab_fallback = ""
 --   end
 -- end, {"i", "s"}),
 require("plugins.configs.comment")
+require("plugins.configs.vista")
