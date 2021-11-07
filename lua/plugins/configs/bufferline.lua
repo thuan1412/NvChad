@@ -9,7 +9,7 @@ bufferline.setup {
    options = {
       offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
       numbers = function(opts)
-        return string.format('%s-', opts.ordinal, opts.id)
+        return string.format('%s:', opts.ordinal, opts.id)
       end,
       buffer_close_icon = "",
       modified_icon = "●",

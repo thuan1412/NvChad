@@ -6,6 +6,7 @@ end
 ts_config.setup {
    ensure_installed = {
       "lua",
+      "comment"
    },
    highlight = {
       enable = true,

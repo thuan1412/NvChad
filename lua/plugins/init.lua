@@ -294,6 +294,7 @@ return packer.startup(function()
   -- use mhartington/formatter-nvim
   -- use nvim-telescope/telescope-node-modules
   use 'TimUntersberger/neogit'
+  use 'mattn/emmet-vim'
   -- use octo - github integraion - nice
   -- use package-info.nvim
 

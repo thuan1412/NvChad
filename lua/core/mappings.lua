@@ -159,12 +159,20 @@ M.dashboard = function()
 end
 
 M.nvimtree = function()
-   map("n", plugin_maps.nvimtree.toggle, ":NvimTreeToggle <CR>")
+   local m = plugin_maps.nvimtree
+
+   map("n", m.toggle, ":NvimTreeToggle <CR>")
+   -- TODO: cannot call nvim-tree outside the actual nvimtree :)
+   -- map("n", m.copy_absolute_path, ":lua require('nvim-tree').on_keypress('copy_absolute_path') <CR>")
+   -- map("n", m.copy_path, ":lua require('nvim-tree').on_keypress('copy_path') <CR>")
+   -- map("n", m.copy_name, ":lua require('nvim-tree').on_keypress('copy_name') <CR>")
 end
 
 M.telescope = function()
    local m = plugin_maps.telescope
 
+   map("n", m.open, ":Telescope <CR>")
+   map("n", m.keymaps, ":Telescope keymaps<CR>")
    map("n", m.buffers, ":Telescope buffers <CR>")
    map("n", m.code_actions, ":Telescope lsp_code_actions <CR>")
    map("n", m.find_files, ":Telescope find_files <CR>")

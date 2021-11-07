@@ -173,10 +173,15 @@ M.mappings.plugins = {
    },
    -- file explorer/tree
    nvimtree = {
-      toggle = "<space>e"
+      toggle = "<space>e",
+      copy_absolute_path = "<space>gy",
+      copy_path = "<space>ry",
+      copy_name = "<space>ny",
    },
    -- multitool for finding & picking things
    telescope = {
+      open = "<space>t",
+      keymaps = "<space>km",
       buffers = "<space>b",
       code_actions = "<space>a",
       find_files = "<space>f",
