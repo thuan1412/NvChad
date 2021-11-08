@@ -191,6 +191,7 @@ M.mappings.plugins = {
       help_tags = "<space>sh",
       live_grep = "<space>sw",
       oldfiles = "<space>so",
+      dynamic_symbols = "<space>ss",
       themes = "<space>th", -- NvChad theme picker
       -- media previews within telescope finders
       telescope_media = {
