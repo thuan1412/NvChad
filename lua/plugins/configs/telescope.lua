@@ -3,6 +3,8 @@ if not present then
    return
 end
 
+-- TODO: update layout of lsp_references,...
+-- ref: https://github.com/nvim-telescope/telescope.nvim/issues/1380
 telescope.setup {
    defaults = {
       vimgrep_arguments = {
