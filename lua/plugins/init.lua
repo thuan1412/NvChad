@@ -277,9 +277,6 @@ return packer.startup(function()
     -- file outline
    use {
       'liuchengxu/vista.vim',
-      setup = function()
-         require("core.mappings").vista()
-      end
    }
 	-- code format
 	use { 'sbdchd/neoformat' }
@@ -300,11 +297,11 @@ return packer.startup(function()
 
   use {
     "williamboman/nvim-lsp-installer",
-    config = function()         
+    config = function()
       local lsp_installer = require "nvim-lsp-installer"
       lsp_installer.on_server_ready(function(server)
         local opts = {}
-          server:setup(opts)            
+          server:setup(opts)
           vim.cmd [[ do User LspAttachBuffers ]]
         end)
       end,

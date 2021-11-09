@@ -6,6 +6,14 @@ end
 
 vim.opt.completeopt = "menuone,noselect"
 
+cmp.event:on('confirm_done', function ()
+  -- get current location
+  local r, c = unpack(vim.api.nvim_win_get_cursor(0))
+  print(r, c)
+  -- check whether it's in a fucntion call
+  -- check signature of function call
+end)
+
 -- nvim-cmp setup
 cmp.setup {
    snippet = {
@@ -38,9 +46,22 @@ cmp.setup {
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
       -- ["<C-Space>"] = cmp.mapping.complete(),
       ["<C-e>"] = cmp.mapping.close(),
+      -- ["<CR>"] = cmp.mapping(function ()
+      --   cmp.confirm({
+      --      behavior = cmp.ConfirmBehavior.Replace,
+      --      select = true,
+      --   })
+      -- end),
+      -- function(fallback)
+      --   print("confirm function is called", fallback)
+      --   cmp.confirm {
+      --      behavior = cmp.ConfirmBehavior.Replace,
+      --      select = true,
+      --   }
+      -- end,
       ["<CR>"] = cmp.mapping.confirm {
-         behavior = cmp.ConfirmBehavior.Replace,
-         select = true,
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = true,
       },
       ["<Tab>"] = function(fallback)
         if cmp.visible() then
@@ -56,6 +77,7 @@ cmp.setup {
           fallback()
         end
       end,
+      -- setting for Copilot, don't know why it's set in here
       ["<C-space>"] = cmp.mapping(function()
         local copilot_keys = vim.fn["copilot#Accept"]()
         if copilot_keys ~= "" then
