@@ -9,6 +9,8 @@ nvim_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+nvim_set_keymap("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+nvim_set_keymap("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 nvim_set_keymap("n", "gr", "<cmd>Telescope lsp_references path_display={'shorten'}<CR>", opts)
 nvim_set_keymap("n", "gi", "<cmd>Telescope lsp_implementations path_display={'shorten'}<CR>", opts)
 

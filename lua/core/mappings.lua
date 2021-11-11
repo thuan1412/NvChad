@@ -93,7 +93,6 @@ M.misc = function()
       -- pick a hidden term
       map("n", term_maps.pick_term, ":Telescope terms <CR>")
       -- Open terminals
-      -- TODO this opens on top of an existing vert/hori term, fixme
       map("n", term_maps.new_horizontal, ":execute 15 .. 'new +terminal' | let b:term_type = 'hori' | startinsert <CR>")
       map("n", term_maps.new_vertical, ":execute 'vnew +terminal' | let b:term_type = 'vert' | startinsert <CR>")
       map("n", term_maps.new_window, ":execute 'terminal' | let b:term_type = 'wind' | startinsert <CR>")

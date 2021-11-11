@@ -10,7 +10,6 @@ M.close_buffer = function(bufexpr, force)
    local opts = {
       next = "cycle", -- how to retrieve the next buffer
       quit = false, -- exit when last buffer is deleted
-      --TODO make this a chadrc flag/option
    }
 
    -- ----------------

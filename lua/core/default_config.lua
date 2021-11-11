@@ -55,8 +55,6 @@ M.ui = {
    transparency = false,
 }
 
--- TODO: git move hunk
-
 -- these are plugin related options
 M.plugins = {
    -- enable and disable plugins (false for disable)

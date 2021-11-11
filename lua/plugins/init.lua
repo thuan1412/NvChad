@@ -266,7 +266,7 @@ return packer.startup(function()
       "github/copilot.vim"
     }
 
-    -- tpope -- TODO: replace with lua
+    -- tpope --
     use 'tpope/vim-abolish'
     use 'tpope/vim-repeat'
     use 'tpope/vim-speeddating'
@@ -286,10 +286,7 @@ return packer.startup(function()
 
    -- TODO: install later
   -- mhartington/dotfiles is the dotfiles of the vim for frontend author
-  -- use nvim-ts-comment-string
-  -- use nvim-comment
   -- use mhartington/formatter-nvim
-  -- use nvim-telescope/telescope-node-modules
   use 'TimUntersberger/neogit'
   use 'mattn/emmet-vim'
   -- use octo - github integraion - nice

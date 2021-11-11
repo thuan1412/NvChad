@@ -6,12 +6,15 @@ end
 
 vim.opt.completeopt = "menuone,noselect"
 
+-- local nvim_set_keymap = vim.api.nvim_set_keymap
+-- nvim_set_keymap("n", "3", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
 cmp.event:on('confirm_done', function ()
   -- get current location
-  local r, c = unpack(vim.api.nvim_win_get_cursor(0))
-  print(r, c)
-  -- check whether it's in a fucntion call
-  -- check signature of function call
+  local ts_utils = require "nvim-treesitter.ts_utils"
+  local cursor_node = ts_utils.get_node_at_cursor()
+  print("------------------")
+  print(cursor_node:type())
+  -- TODO check whether it's in a fucntion call, check signature of function call
 end)
 
 -- nvim-cmp setup
@@ -50,7 +53,7 @@ cmp.setup {
       --   cmp.confirm({
       --      behavior = cmp.ConfirmBehavior.Replace,
       --      select = true,
-      --   })
+      --   })vim.lsp.buf.type_definition
       -- end),
       -- function(fallback)
       --   print("confirm function is called", fallback)
