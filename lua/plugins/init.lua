@@ -233,9 +233,31 @@ return packer.startup(function()
          require("core.mappings").nvimtree()
       end,
    }
+   -- use {
+   --    "nvim-telescope/telescope.nvim",
+   --    module = "telescope",
+   --    cmd = "Telescope",
+   --    requires = {
+   --       {
+   --          "nvim-telescope/telescope-fzf-native.nvim",
+   --          run = "make",
+   --       },
+   --       {
+   --          "nvim-telescope/telescope-media-files.nvim",
+   --          disable = not status.telescope_media,
+   --          setup = function()
+   --             require("core.mappings").telescope_media()
+   --          end,
+   --       },
+   --    },
+   --    config = override_req("telescope", "plugins.configs.telescope"),
+   --    setup = function()
+   --       require("core.mappings").telescope()
+   --    end,
+   -- }
 
    use {
-      "nvim-telescope/telescope.nvim",
+      "/home/thuando/code/nvim/telescope.nvim",
       module = "telescope",
       cmd = "Telescope",
       requires = {
