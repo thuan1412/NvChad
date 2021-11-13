@@ -31,6 +31,15 @@ M.misc = function()
       map("n", "<space>7", ":Vista!! <CR>")
       -- use ESC to turn off search highlighting
       map("n", "<Esc>", ":noh <CR>")
+
+      -- use `gx` to open url
+      if vim.fn.has("mac") == 1 then
+        map('n', 'gx', ':call jobstart(["open", expand("<cfile>")], {"detach": v:true})<CR>', {})
+      elseif vim.fn.has("unix") == 1 then
+        map('n', 'gx', ':call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>', {})
+      else
+        map('n', 'gx', ':lua print("Error: gx is not supported on this OS!")<CR>', {})
+      end
    end
 
    local function optional_mappings()
