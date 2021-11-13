@@ -326,5 +326,10 @@ return packer.startup(function()
       end,
     }
 
-   require("core.hooks").run("install_plugins", use)
+  -- debugging
+  use 'mfussenegger/nvim-dap'
+  -- use 'nvim-telescope/telescope-dap.nvim'
+  use 'rcarriga/nvim-dap-ui'
+
+  require("core.hooks").run("install_plugins", use)
 end)
