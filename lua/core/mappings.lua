@@ -40,6 +40,9 @@ M.misc = function()
       else
         map('n', 'gx', ':lua print("Error: gx is not supported on this OS!")<CR>', {})
       end
+
+      -- floating cmd window, fine-cmdline
+      map('n', '<C-p>', ':lua require("fine-cmdline").open()<CR>')
    end
 
    local function optional_mappings()

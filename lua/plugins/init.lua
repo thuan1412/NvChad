@@ -334,5 +334,12 @@ return packer.startup(function()
   -- go dev
   use "buoto/gotests-vim"
 
+  -- floating command window
+  use {
+    'VonHeikemen/fine-cmdline.nvim',
+    requires = {
+      {'MunifTanjim/nui.nvim'}
+    }
+  }
   require("core.hooks").run("install_plugins", use)
 end)
