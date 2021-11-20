@@ -331,5 +331,8 @@ return packer.startup(function()
   -- use 'nvim-telescope/telescope-dap.nvim'
   use 'rcarriga/nvim-dap-ui'
 
+  -- go dev
+  use "buoto/gotests-vim"
+
   require("core.hooks").run("install_plugins", use)
 end)

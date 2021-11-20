@@ -134,8 +134,8 @@ end
 M.bufferline = function()
   local m = plugin_maps.bufferline
 
-  map("n", m.next_buffer, ":BufferLineCycleNext <CR>")
-  map("n", m.prev_buffer, ":BufferLineCyclePrev <CR>")
+  -- map("n", m.next_buffer, ":BufferLineCycleNext <CR>")
+  -- map("n", m.prev_buffer, ":BufferLineCyclePrev <CR>")
 
   map("n", "<leader>c", ":bdelete<CR>")
 
