@@ -20,3 +20,4 @@ vim.g.copilot_tab_fallback = ""
 require("plugins.configs.comment")
 require("plugins.configs.vista")
 require("plugins.configs.dap")
+-- require("plugins.configs.sg")

@@ -341,5 +341,12 @@ return packer.startup(function()
       {'MunifTanjim/nui.nvim'}
     }
   }
+
+  use {
+    'tjdevries/sg.nvim',
+    commit = '76354e9f0b6de39134ec9efcd022f079ae0ce02b',
+    after = 'nvim-lspconfig'
+  }
+
   require("core.hooks").run("install_plugins", use)
 end)

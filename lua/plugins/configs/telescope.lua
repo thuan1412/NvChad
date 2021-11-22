@@ -65,6 +65,26 @@ telescope.setup {
          find_cmd = "rg", -- find command (defaults to `fd`)
       },
    },
+   pickers = {
+      lsp_references = {
+        initial_mode = "normal",
+        layout_strategy = "horizontal",
+        layout_config = {
+          vertical = {
+            height = 0.3,
+            width = 0.85,
+            preview_height = 0.5,
+            preview_cutoff = 120,
+          },
+        },
+        path_display = function(opts, path)
+          local cwd = vim.fn.expand("%:p:h")
+          local res_path = string.sub(path, string.len(cwd) - 1)
+          return res_path
+        end,
+        grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+      },
+   }
 }
 
 local extensions = { "themes", "terms", "fzf" }

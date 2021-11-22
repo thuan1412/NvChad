@@ -11,7 +11,8 @@ nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 nvim_set_keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
 nvim_set_keymap("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 nvim_set_keymap("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-nvim_set_keymap("n", "gr", "<cmd>Telescope lsp_references path_display={'shorten'}<CR>", opts)
+-- TOOD: update the path_dispay function
+nvim_set_keymap("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
 nvim_set_keymap("n", "gi", "<cmd>Telescope lsp_implementations path_display={'shorten'}<CR>", opts)
 
 local function on_attach(_, bufnr)
