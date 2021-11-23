@@ -78,8 +78,8 @@ telescope.setup {
           },
         },
         path_display = function(opts, path)
-          local cwd = vim.fn.expand("%:p:h")
-          local res_path = string.sub(path, string.len(cwd) - 1)
+          -- local cwd = vim.fn.expand("%:p:h")
+          local res_path = vim.fn.fnamemodify(path, ":.") 
           return res_path
         end,
         grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
