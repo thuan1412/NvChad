@@ -64,6 +64,11 @@ telescope.setup {
          filetypes = { "png", "webp", "jpg", "jpeg" },
          find_cmd = "rg", -- find command (defaults to `fd`)
       },
+      path_display = function(opts, path)
+        -- local cwd = vim.fn.expand("%:p:h")
+        local res_path = vim.fn.fnamemodify(path, ":.") 
+        return res_path
+      end,
    },
    pickers = {
       lsp_references = {
@@ -84,6 +89,14 @@ telescope.setup {
         end,
         grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
       },
+      oldfiles = {
+        initial_mode = "normal",
+        path_display = function(opts, path)
+          -- local cwd = vim.fn.expand("%:p:h")
+          local res_path = vim.fn.fnamemodify(path, ":.") 
+          return res_path
+        end,
+      }
    }
 }
 
