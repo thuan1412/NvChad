@@ -63,18 +63,19 @@ M.colorizer = function()
 end
 
 M.luasnip = function()
-   local present, luasnip = pcall(require, "luasnip")
-   if not present then
-      return
-   end
+  local present, luasnip = pcall(require, "luasnip")
+  if not present then
+    return
+  end
 
-   luasnip.config.set_config {
-      history = true,
-      updateevents = "TextChanged,TextChangedI",
-   }
+  luasnip.config.set_config {
+    history = true,
+    updateevents = "TextChanged,TextChangedI",
+  }
+  -- trigger snippet with the formart log_var1_var2_var3
 
-   require("luasnip/loaders/from_vscode").load { paths = chadrc_config.plugins.options.luasnip.snippet_path }
-   require("luasnip/loaders/from_vscode").load()
+  require("luasnip/loaders/from_vscode").load { paths = chadrc_config.plugins.options.luasnip.snippet_path }
+  require("luasnip/loaders/from_vscode").load()
 end
 
 M.signature = function()

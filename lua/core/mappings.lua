@@ -41,6 +41,10 @@ M.misc = function()
         map('n', 'gx', ':lua print("Error: gx is not supported on this OS!")<CR>', {})
       end
 
+      -- TODO: <C-j>, <C-k> instead of <C-e>, <C-y>
+      -- map("n", "<C-j>", "<C-e>")
+      -- map("n", "<C-k>", "<C-e>")
+
       -- floating cmd window, fine-cmdline
       map('n', '<C-p>', ':lua require("fine-cmdline").open()<CR>')
    end

@@ -1,4 +1,5 @@
 require('Comment').setup({
+  ignore = '^$',
   toggler = {
     -- ignores empty lines
     ignore = '^$',
