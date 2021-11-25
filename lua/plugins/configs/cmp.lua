@@ -8,14 +8,14 @@ vim.opt.completeopt = "menuone,noselect"
 
 -- local nvim_set_keymap = vim.api.nvim_set_keymap
 -- nvim_set_keymap("n", "3", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-cmp.event:on('confirm_done', function ()
-  -- get current location
-  local ts_utils = require "nvim-treesitter.ts_utils"
-  local cursor_node = ts_utils.get_node_at_cursor()
-  print("------------------")
-  print(cursor_node:type())
-  -- TODO check whether it's in a fucntion call, check signature of function call
-end)
+-- cmp.event:on('confirm_done', function ()
+--   -- get current location
+--   local ts_utils = require "nvim-treesitter.ts_utils"
+--   local cursor_node = ts_utils.get_node_at_cursor()
+--   print("------------------")
+--   print(cursor_node:type())
+--   -- TODO check whether it's in a fucntion call, check signature of function call
+-- end)
 
 -- nvim-cmp setup
 cmp.setup {
@@ -89,9 +89,9 @@ cmp.setup {
       end, {"i", "s"}),
    },
    sources = {
-      { name = "nvim_lsp" },
       { name = "luasnip" },
-      { name = "buffer" },
+      { name = "nvim_lsp", keyword_length=3 },
+      { name = "buffer", keyword_length=5 },
       { name = "nvim_lua" },
       { name = "path" },
    },
