@@ -170,6 +170,7 @@ return packer.startup(function()
       wants = "friendly-snippets",
       after = "nvim-cmp",
       -- config = override_req("luasnip", "(plugins.configs.others).luasnip()"),
+      -- config = override_req("luasnip", "plugins.configs.luasnip")
    }
 
    use {
@@ -310,7 +311,7 @@ return packer.startup(function()
   -- mhartington/dotfiles is the dotfiles of the vim for frontend author
   -- use mhartington/formatter-nvim
   use 'TimUntersberger/neogit'
-  use 'mattn/emmet-vim'
+  use 'mattn/emmet-vim' -- html snippets
   -- use octo - github integraion - nice
   -- use package-info.nvim
 
@@ -347,6 +348,9 @@ return packer.startup(function()
     commit = '76354e9f0b6de39134ec9efcd022f079ae0ce02b',
     after = 'nvim-lspconfig'
   }
+
+  -- html
+  use "AndrewRadev/tagalong.vim"
 
   require("core.hooks").run("install_plugins", use)
 end)

@@ -1,9 +1,11 @@
 local present, cmp = pcall(require, "cmp")
 
 if not present then
+  print("cmp is not present")
    return
 end
 
+  print("cmp is present")
 vim.opt.completeopt = "menuone,noselect"
 
 -- local nvim_set_keymap = vim.api.nvim_set_keymap

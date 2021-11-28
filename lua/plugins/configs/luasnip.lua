@@ -1,9 +1,10 @@
 local present, ls = pcall(require, "luasnip")
 local chadrc_config = require("core.utils").load_config()
 
-if not present then
-  return
-end
+print("tai sao may` lai k dc in ra")
+-- if not present then
+--   return
+-- end
 -- some shorthands...
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -12,14 +13,6 @@ local i = ls.insert_node
 local f = ls.function_node
 local c = ls.choice_node
 local d = ls.dynamic_node
-local l = require("luasnip.extras").lambda
-local r = require("luasnip.extras").rep
-local p = require("luasnip.extras").partial
-local m = require("luasnip.extras").match
-local n = require("luasnip.extras").nonempty
-local dl = require("luasnip.extras").dynamic_lambda
-local fmt = require("luasnip.extras.fmt").fmt
-local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
@@ -91,6 +84,10 @@ snippets.all = make {
 
 -- stole from tj
 snippets.go = make {
+  p0 = {
+    t { 'fmt.Println("=====================")' },
+    i(0)
+  },
   fp0 = {
     t { 'fmt.Println("=====================")' },
     i(0)
@@ -119,6 +116,14 @@ snippets.go = make {
     t({ "", "}" }),
   }
 }
+
+snippets.lua = make {
+  p0 = {
+    t { 'print("=====================")' },
+    i(0)
+  }
+}
+
 
 ls.snippets = snippets
 
