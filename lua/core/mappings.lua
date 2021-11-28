@@ -41,6 +41,9 @@ M.misc = function()
         map('n', 'gx', ':lua print("Error: gx is not supported on this OS!")<CR>', {})
       end
 
+      map("n", "sg", ':lua require("custom.fn").sg_search()<CR>')
+      map("v", "sg", ':lua require("custom.fn").sg_search()<CR>')
+
       -- TODO: <C-j>, <C-k> instead of <C-e>, <C-y>
       -- map("n", "<C-j>", "<C-e>")
       -- map("n", "<C-k>", "<C-e>")

@@ -73,7 +73,7 @@ telescope.setup {
    pickers = {
       lsp_references = {
         initial_mode = "normal",
-        layout_strategy = "vertical",
+        layout_strategy = "horizontal",
         layout_config = {
           vertical = {
             height = 0.3,

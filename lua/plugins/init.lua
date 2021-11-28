@@ -100,6 +100,7 @@ return packer.startup(function()
       config = override_req("nvim_treesitter", "plugins.configs.treesitter"),
    }
 
+   -- TODO: use https://github.com/tpope/vim-fugitive instead
    -- git stuff
    use {
       "lewis6991/gitsigns.nvim",
