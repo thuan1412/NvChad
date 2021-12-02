@@ -353,5 +353,10 @@ return packer.startup(function()
   -- html
   use "AndrewRadev/tagalong.vim"
 
+  -- go language server
+  use "ray-x/go.nvim"
+
+  use "lewis6991/impatient.nvim"
+
   require("core.hooks").run("install_plugins", use)
 end)

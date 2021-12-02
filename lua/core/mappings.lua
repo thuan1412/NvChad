@@ -50,6 +50,10 @@ M.misc = function()
 
       -- floating cmd window, fine-cmdline
       map('n', '<C-p>', ':lua require("fine-cmdline").open()<CR>')
+
+      -- go.nvim mapping
+      map('n', 'goc', ':GoCmt <CR>')
+      map('n', 'gos', ':GoFillStruct <CR>')
    end
 
    local function optional_mappings()

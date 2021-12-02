@@ -1,3 +1,4 @@
+require('impatient')
 local ok, err = pcall(require, "core")
 
 if not ok then
@@ -30,3 +31,5 @@ vim.defer_fn(function ()
   require("luasnip/loaders/from_vscode").load()
   require("plugins.configs.luasnip")
 end, 100000)
+
+require('go').setup()
