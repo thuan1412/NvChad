@@ -27,6 +27,11 @@ M.setup_lsp = function(attach, capabilities)
     capabilities = capabilities,
   }
 
-  end
+  -- lspconfig.vuels.setup {
+  --   on_attach = attach,
+  --   capabilities = capabilities,
+  -- }
 
-  return M
+end
+
+return M
