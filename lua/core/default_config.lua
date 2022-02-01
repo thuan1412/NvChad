@@ -44,11 +44,12 @@ M.options = {
 M.ui = {
    italic_comments = false,
    -- theme to be used, check available themes with `<leader> + t + h`
-   theme = "onedark",
+   theme = "gruvbox",
    -- toggle between two themes, see theme_toggler mappings
    theme_toggler = {
       "onedark",
       "gruvchad",
+      "gruvbox",
    },
    -- Enable this only if your terminal has the colorscheme set which nvchad uses
    -- For Ex : if you have onedark set in nvchad, set onedark's bg color on your terminal

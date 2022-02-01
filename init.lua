@@ -33,3 +33,6 @@ vim.defer_fn(function ()
 end, 100000)
 
 require('go').setup()
+
+-- set colorschme
+vim.cmd("colorscheme gruvbox")
